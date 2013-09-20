@@ -84,10 +84,6 @@ func fields(line string) (int, string, error) {
 	}
 	id := int(id64)
 
-	if tag == "" {
-		return id, "", nil
-	}
-
 	i := strings.Index(tag, " ")
 	if i == -1 {
 		return id, tag, nil
