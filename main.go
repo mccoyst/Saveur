@@ -56,6 +56,9 @@ func putall() {
 
 		ids = append(ids, id)
 	}
+	if err = sc.Err(); err != nil {
+		return
+	}
 
 	for _, id := range ids {
 		w, err := acme.Open(id, nil)
